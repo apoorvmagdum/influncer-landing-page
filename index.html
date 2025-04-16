@@ -34,6 +34,17 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "VrgKqk25bvBrKhieu",
+      });
+   })();
+</script>
+<script src="contactform.js"></script>
 </head>
 
 <body class="index-page">
@@ -771,7 +782,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item">
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Tanu Bhosales </h3>
+              <h3>Tanu Bhosale </h3>
               <!--<h4>Store Owner</h4>-->
               <div class="stars">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -1180,16 +1191,29 @@
                 </div>
               </div>
 
-              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="icon-box">
+                   <i class="bi bi-telephone" aria-hidden="true"></i>
+                 </div>
+                    <div class="content">
+                       <h4>Phone Number</h4>
+                      <ul>
+                         <li><a href="https://wa.me/918767033871" target="_blank" rel="noopener noreferrer">87670 33871</a></li>
+                         <li><a href="https://wa.me/917219584556" target="_blank" rel="noopener noreferrer">72195 84556</a></li>
+                      </ul>
+                </div>
+              </div>
+
+             <!-- <div class="info-item" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
                   <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <p>87670 33871</p>
+                  <p>72195 84556</p>
                 </div>
-              </div>
+              </div>-->
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
@@ -1205,13 +1229,14 @@
           </div>
 
           <div class="col-lg-7">
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
               <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <form action="https://api.web3forms.com/submit" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200"></form>
+              <p>Connect with top influencers for strategic and professional collaborations.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="access_key" value="d7136d40-c8c8-47b9-9d84-2b9029277968">
+              
                 <div class="row gy-4">
-
                   <div class="col-md-6">
                     <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                   </div>
@@ -1228,13 +1253,13 @@
                     <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                   </div>
 
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="col-12 text-center"></div>
+                       <!-- <div class="loading">Loading</div>
+                             <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>-->
 
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
+                                       <button type="submit" onclick="sendMail()" class="btn">Send Message</button>
+                
 
                 </div>
               </form>
